@@ -3,16 +3,15 @@ Taobao top client(SDK) for laravel 5.1
 
 
 ```php
-use TaobaoSdk;
-use TaobaoSdk\request\TbkItemsGetRequest;
+require_once __DIR__ .'/vendor/autoload.php';
+use TaobaoSdk\TopClient;
 
-$TaobaoSdk = TaobaoSdk::connection();
-$req = new TbkItemsGetRequest;
-$req->setFields("num_iid,nick,title,price,pic_url");
-$req->setKeyword('手机');
-$req->setSort("commissionVolume_desc");
-$req->setPageNo(1);
-$req->setPageSize($limit);
-$resp = $TaobaoSdk->execute($req);
-dd($resp);
+$c = new TopClient();
+$c->appkey = $appkey;
+$c->secretKey = $secretKey;
+$req = new \TaobaoSdk\Request\AlibabaAliqinFlowWalletGradeRequest();
+$req->setPhoneNum("phone-number");
+$resp = $c->execute($req, $session);
+
+ var_dump($resp);
 ```
