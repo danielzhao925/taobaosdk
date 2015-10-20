@@ -1,0 +1,23 @@
+ {
+    "name": "danielzhao/taobaosdk",
+    "type": "library",
+    "description": "Taobao SDK",
+    "keywords": ["taobao", "laravel", "sdk", "api"],
+    "homepage": "https://github.com/danielzhao925/taobaosdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "daniel zhao",
+            "email": "zhaodanqiang@gmail.com"
+        }
+    ],
+    "require": {
+      "php": ">=5.4.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "Zhao\\TaobaoSdk\\": "src/",
+        "TaobaoSdk\\": "src/top/"
+      }
+    }
+}
